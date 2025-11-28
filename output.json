@@ -1,0 +1,114 @@
+{
+  "timestamp": "2025-11-28T17:23:21.965846Z",
+  "insights": {
+    "average_latency_ms": 156.02,
+    "max_cpu_usage": 99.0,
+    "max_memory_usage": 92.0,
+    "error_rate": 0.0316,
+    "uptime_seconds": 1258200
+  },
+  "anomalies": [
+    {
+      "metric": "cpu_usage",
+      "value": 99.0,
+      "threshold": 85.0,
+      "severity": "high",
+      "description": "CPU usage reached 99.0% at 2023-10-02T13:00:00Z"
+    },
+    {
+      "metric": "memory_usage",
+      "value": 92.0,
+      "threshold": 80.0,
+      "severity": "high",
+      "description": "Memory usage critical at 92.0%"
+    },
+    {
+      "metric": "latency_ms",
+      "value": 384.0,
+      "threshold": 250.0,
+      "severity": "high",
+      "description": "Latency spike to 384.0ms"
+    },
+    {
+      "metric": "error_rate",
+      "value": 0.13,
+      "threshold": 0.05,
+      "severity": "high",
+      "description": "Error rate critical at 13.0%"
+    },
+    {
+      "metric": "temperature_celsius",
+      "value": 89.0,
+      "threshold": 75.0,
+      "severity": "high",
+      "description": "Server temperature at 89.0C"
+    },
+    {
+      "metric": "io_wait",
+      "value": 14.0,
+      "threshold": 10.0,
+      "severity": "medium",
+      "description": "IO wait time elevated at 14.0%"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-001",
+      "action": "Upgrade CPU to higher performance model",
+      "target": "CPU",
+      "parameters": {
+        "model": "Intel Xeon Gold 6248",
+        "cores": 20
+      },
+      "benefit_estimate": "Reduce CPU usage from 99% to 70%, improving application performance and reducing downtime by 15%"
+    },
+    {
+      "id": "rec-002",
+      "action": "Increase RAM capacity by 32GB",
+      "target": "Memory",
+      "parameters": {
+        "additional_memory": "32GB"
+      },
+      "benefit_estimate": "Lower memory usage from 92% to 75%, enhancing system responsiveness and decreasing latency by 20%"
+    },
+    {
+      "id": "rec-003",
+      "action": "Implement load balancing across servers",
+      "target": "Server Infrastructure",
+      "parameters": {
+        "method": "Round Robin",
+        "servers": 3
+      },
+      "benefit_estimate": "Decrease latency from 384ms to 200ms, improving user experience and increasing customer satisfaction by 25%"
+    },
+    {
+      "id": "rec-004",
+      "action": "Optimize application code to reduce error rate",
+      "target": "Application",
+      "parameters": {
+        "target_error_rate": "0.02"
+      },
+      "benefit_estimate": "Lower error rate from 3.16% to 0.02%, increasing transaction success rates and potentially boosting revenue by 10%"
+    },
+    {
+      "id": "rec-005",
+      "action": "Install additional cooling systems",
+      "target": "Server Room",
+      "parameters": {
+        "cooling_units": 2,
+        "type": "In-Row"
+      },
+      "benefit_estimate": "Reduce temperature from 89°C to 70°C, preventing hardware failures and extending equipment lifespan, saving 5% on maintenance costs"
+    }
+  ],
+  "service_status_summary": {
+    "online": [],
+    "degraded": [
+      "api_gateway",
+      "cache"
+    ],
+    "offline": [
+      "database"
+    ]
+  }
+}
